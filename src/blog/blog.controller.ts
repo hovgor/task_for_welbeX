@@ -7,7 +7,6 @@ import {
   Param,
   ParseIntPipe,
   Post,
-  Query,
   Req,
   Res,
   UnauthorizedException,
@@ -17,13 +16,12 @@ import {
   ValidationPipe,
 } from '@nestjs/common';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
-import { ApiBearerAuth, ApiConsumes, ApiQuery, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiConsumes, ApiTags } from '@nestjs/swagger';
 import { Response } from 'express';
 import { diskStorage } from 'multer';
 import * as path from 'path';
 import { AuthService } from 'src/auth/auth.service';
 import { v4 as uuidv4 } from 'uuid';
-import BlogEntity from './blog.pg.entity';
 import { BlogService } from './blog.service';
 import { CreateBlogDto } from './dto/create.blog.dto';
 import { FileUploadService } from './upload-file/file.upload.service';

@@ -2,17 +2,12 @@ import { Injectable, Logger } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import BlogEntity from './blog.pg.entity';
-import { CreateBlodDbDto } from './dto/create.blog.db.dto';
-import { CreateBlogDto } from './dto/create.blog.dto';
-import UploadFileEntity from './upload-file/file.upload.pg.entity';
 
 @Injectable()
 export class BlogService {
   constructor(
     @InjectRepository(BlogEntity)
     private readonly blogRepository: Repository<BlogEntity>,
-    @InjectRepository(UploadFileEntity)
-    private readonly uploadFileRepository: Repository<UploadFileEntity>,
   ) {}
 
   // create blog
