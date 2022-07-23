@@ -1,6 +1,4 @@
 export enum UserRoles {
-  driver = 1,
-  superAdmin = 2,
-  client = 3,
-  staff = 4,
+  User = 1,
+  Admin = 2,
 }

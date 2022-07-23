@@ -15,7 +15,7 @@ export class HashPassword {
   }
   async IsMutchPassword(password: string, passwordHash: string) {
     try {
-      const salt = await bcrypt.genSalt();
+      await bcrypt.genSalt();
       const isMatch = await bcrypt.compare(password, passwordHash);
       return isMatch;
     } catch (error) {

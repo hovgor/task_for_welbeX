@@ -12,10 +12,6 @@ export interface IConfig {
   GLOBAL_PREFIX: string;
   ALLOWED_ORIGINS: string[];
   SECRET: string;
-  CHAT_TOKEN_SECRET: string;
-  TOKEN_TIMEOUT: number;
-  PUBLIC_FOLDER_PATH: string;
-  WATERMARK: string;
   FRONT_URL: string;
 
   DATABASE_HOST: string;
@@ -58,10 +54,6 @@ export class ConfigService {
       GLOBAL_PREFIX: Joi.string().default('api'),
       ALLOWED_ORIGINS: Joi.string().default('ggmp'),
       SECRET: Joi.string(),
-      CHAT_TOKEN_SECRET: Joi.string(),
-      TOKEN_TIMEOUT: Joi.number(),
-      PUBLIC_FOLDER_PATH: Joi.string(),
-      WATERMARK: Joi.string(),
       FRONT_URL: Joi.string(),
 
       DATABASE_HOST: Joi.string().default('localhost'),

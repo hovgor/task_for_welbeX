@@ -27,7 +27,7 @@ export default class UserEntityBase extends BaseEntity {
   @Column({ type: 'varchar', default: 0, nullable: true })
   password: string;
 
-  @Column({ type: 'smallint', default: UserRoles.driver })
+  @Column({ type: 'smallint', default: UserRoles.User })
   @IsInt()
   role: UserRoles;
 
